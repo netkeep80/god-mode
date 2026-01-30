@@ -197,6 +197,23 @@ Build a theming system that allows the GOD MODE window to blend into any applica
 
 ---
 
+## Dependency Diagram
+
+```mermaid
+graph TD
+    P1[Phase 1: Core Types & Provider] --> T1[TASK 1: Floating Window]
+    T1 --> T2[TASK 2: Tab System]
+    T1 --> T6[TASK 6: Theming & Styling]
+    T2 --> T3[TASK 3: Query Panel]
+    T2 --> T4[TASK 4: Context Panel]
+    T2 --> T5[TASK 5: Search Panel]
+    T6 --> T3
+    T6 --> T4
+    T6 --> T5
+```
+
+---
+
 ## Effort Estimation
 
 | TASK                 | Complexity | Priority | Dependencies   |

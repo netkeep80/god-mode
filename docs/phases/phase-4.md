@@ -178,6 +178,21 @@ Build the end-to-end flow from draft to published GitHub issue, including confir
 
 ---
 
+## Dependency Diagram
+
+```mermaid
+graph TD
+    P1[Phase 1: Core Types] --> T2[TASK 2: GitHub Authentication]
+    P2[Phase 2: UI Components] --> T1[TASK 1: Issue Draft Panel]
+    P3[Phase 3: AI Conversation] --> T4[TASK 4: Issue Generation Engine]
+    T2 --> T3[TASK 3: GitHub API Client]
+    T1 --> T5[TASK 5: Issue Publishing Flow]
+    T3 --> T5
+    T4 --> T5
+```
+
+---
+
 ## Effort Estimation
 
 | TASK                       | Complexity | Priority | Dependencies           |

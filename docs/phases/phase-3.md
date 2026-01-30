@@ -174,6 +174,23 @@ Enable saving, loading, and managing conversation sessions across browser sessio
 
 ---
 
+## Dependency Diagram
+
+```mermaid
+graph TD
+    P1[Phase 1: Core Types] --> T2[TASK 2: Conversation Agent Core]
+    P2[Phase 2: UI Components] --> T1[TASK 1: Conversation Panel UI]
+    T2 --> T1
+    T2 --> T3[TASK 3: Context Awareness]
+    T1 --> T5[TASK 5: Conversation Persistence]
+    T2 --> T5
+    T2 --> T4[TASK 4: Guided Brainstorming]
+    T3 --> T4
+    T5 --> T4
+```
+
+---
+
 ## Effort Estimation
 
 | TASK                        | Complexity | Priority | Dependencies     |

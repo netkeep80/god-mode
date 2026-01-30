@@ -178,6 +178,22 @@ Enable uploading screenshots when creating GitHub issues, embedding them as inli
 
 ---
 
+## Dependency Diagram
+
+```mermaid
+graph TD
+    P1[Phase 1: Core Types] --> T1[TASK 1: Screen Capture Engine]
+    P2[Phase 2: UI Components] --> T2[TASK 2: Annotation Canvas]
+    T1 --> T4[TASK 4: Screenshot Persistence]
+    T1 --> T3[TASK 3: Screenshot Integration]
+    T2 --> T3
+    P4[Phase 4: GitHub Integration] --> T3
+    T1 --> T5[TASK 5: Screenshot Upload]
+    P4 --> T5
+```
+
+---
+
 ## Effort Estimation
 
 | TASK                      | Complexity | Priority | Dependencies             |
