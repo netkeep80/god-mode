@@ -19,8 +19,7 @@
 import { readdirSync, readFileSync, writeFileSync, unlinkSync, statSync } from 'fs'
 import { join } from 'path'
 
-// TODO: Update this to match your package name in package.json
-const PACKAGE_NAME = 'my-package'
+const PACKAGE_NAME = 'god-mode'
 const CHANGESET_DIR = '.changeset'
 
 // Version bump type priority (higher number = higher priority)
