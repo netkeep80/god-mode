@@ -115,7 +115,6 @@ jobs:
       needs.detect-changes.outputs.ts-changed == 'true' ||
       needs.detect-changes.outputs.mjs-changed == 'true' ||
       needs.detect-changes.outputs.js-changed == 'true' ||
-      needs.detect-changes.outputs.docs-changed == 'true' ||
       needs.detect-changes.outputs.package-changed == 'true' ||
       needs.detect-changes.outputs.workflow-changed == 'true'
     steps:
@@ -170,7 +169,13 @@ jobs:
     name: Test (Node.js on ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     needs: [detect-changes, changeset-check]
-    if: always() && (github.event_name == 'push' || needs.changeset-check.result == 'success' || needs.changeset-check.result == 'skipped')
+    if: |
+      always() && (
+        github.event_name == 'push' || (
+          needs.detect-changes.outputs.any-code-changed == 'true' &&
+          (needs.changeset-check.result == 'success' || needs.changeset-check.result == 'skipped')
+        )
+      )
     strategy:
       fail-fast: false
       matrix:
