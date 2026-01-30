@@ -1,5 +1,11 @@
 # god-mode
 
+## 0.2.2
+
+### Patch Changes
+
+- 5bc9236: Fix npm publish script and CI/CD pipeline for release readiness
+
 ## 0.2.1
 
 ### Patch Changes

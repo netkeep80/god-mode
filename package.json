@@ -1,6 +1,6 @@
 {
   "name": "god-mode",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "GOD MODE — unified floating DevMode window with AI conversation, GitHub issue generation, screen capture & annotations for React apps",
   "type": "module",
   "main": "./src/index.ts",
