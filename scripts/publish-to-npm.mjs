@@ -26,8 +26,7 @@ import { readFileSync, appendFileSync } from 'fs'
 
 import { getJsRoot, getPackageJsonPath, needsCd, parseJsRootConfig } from './js-paths.mjs'
 
-// TODO: Update this to match your package name in package.json
-const PACKAGE_NAME = 'my-package'
+const PACKAGE_NAME = 'god-mode'
 
 // Load use-m dynamically
 const { use } = eval(await (await fetch('https://unpkg.com/use-m/use.js')).text())
